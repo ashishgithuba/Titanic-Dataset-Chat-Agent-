@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 # Set your deployed backend URL here
-BACKEND_URL = "https://titnaicchatbot.onrender.com"  # Replace with your actual deployed FastAPI URL
+BACKEND_URL = "https://titnaicchatbot.onrender.com/query"  # Replace with your actual deployed FastAPI URL
 
 st.title("🚢 Titanic Chat Agent")
 st.write("Ask me about the Titanic dataset!")
