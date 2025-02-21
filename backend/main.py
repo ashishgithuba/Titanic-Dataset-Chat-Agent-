@@ -6,7 +6,7 @@ from backend.query_handler import process_query
 
 app = FastAPI()
 
-@app.post("/query")
+@app.post("/")
 async def handle_query(request: QueryRequest):
     response = process_query(request.query)
     return {"response": response}
