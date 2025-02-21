@@ -40,5 +40,6 @@ Backend will start at: http://127.0.0.1:8080
 You can test API using http://127.0.0.1:8080/docs
 
 #Run the Streamlit Frontend
-streamlit run frontend/app.py
+streamlit run app.py
+
 Frontend will be accessible at: http://localhost:8501

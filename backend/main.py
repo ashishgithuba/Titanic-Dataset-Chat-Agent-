@@ -1,16 +1,15 @@
-import os
-import uvicorn
 from fastapi import FastAPI
 from backend.models import QueryRequest
 from backend.query_handler import process_query
 
 app = FastAPI()
 
-@app.post("/")
+# Add a default route for root URL
+@app.get("/")
+async def root():
+    return {"message": "Titanic Chatbot API is running!"}
+
+@app.post("/query")
 async def handle_query(request: QueryRequest):
     response = process_query(request.query)
     return {"response": response}
-
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8000))  # Railway provides a dynamic port
-    uvicorn.run("backend.main:app", host="0.0.0.0", port=port)
